@@ -18,6 +18,3 @@ git push
 # success!
 echo "process complete!"
 read -n 1
-# success!
-echo "process complete!"
-read -n 1
