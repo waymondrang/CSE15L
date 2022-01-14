@@ -12,7 +12,7 @@ To install it, visit [their website](https://code.visualstudio.com/) and follow 
 
 Once it has installed, open it and you should be presented with a window similar to the one below. Your window may have slightly different colors or designs—Visual Studio Code has different themes you can play with!
 
-![New Visual Studio Code Window](visualstudiocode.png)
+![New Visual Studio Code Window](https://i.imgur.com/mNSRQyZ.png)
 
 ## Getting Connected
 
@@ -36,7 +36,7 @@ Are you sure you want to continue connecting (yes/no/[fingerprint])?
 
 After that, you will be prompted to enter in your password, after which you will see output that looks similar to this.
 
-![Successful SSH Connection](ssh.png)
+![Successful SSH Connection](https://i.imgur.com/fTLGd4j.png)
 
 If you see this message, that means you have successfully connected to a computer in the CSE basement. Now, any commands that you run in the terminal will execute remotely on the connected computer.
 
@@ -54,15 +54,15 @@ Now that were connected to our remote computer like Neo to the Matrix, play arou
 
 Below is an example of the commands being run. Notice the different colors of each item in the output of `ls`. Each color represents a different type of item. For example, items in blue represent folders. 
 
-![Successful SSH Connection](commands.png)
+![Successful SSH Connection](https://i.imgur.com/oegN2fr.png)
 
 In addition, there are options you can add with each command. For example, a standard `ls` command would output something like this.
 
-![Standard ls Command](ls.png)
+![Standard ls Command](https://i.imgur.com/uawtl1m.png)
 
 However, if we add the `-a` option to the command, ls will not ignore entries that start with `.`, like such
 
-![ls -a Command](ls-a.png)
+![ls -a Command](https://i.imgur.com/CjW3r3A.png)
 
 That's a lot of hidden items!
 
@@ -78,7 +78,7 @@ scp FILENAME.txt USERNAME@ieng6.ucsd.edu:~/
 
 For example,
 
-![ls -a Command](dog.png)
+![ls -a Command](https://i.imgur.com/LdtmX1d.png)
 
 Then, access the remote computer via SSH and check for your file using `ls`. To open the text file, run
 
@@ -90,9 +90,9 @@ To exit the editor, press `CTRL + X`.
 
 Your terminal output should look something like this.
 
-![ls -a Command](sshdog.png)
+![ls -a Command](https://i.imgur.com/r0xqUKD.png)
 
-![ls -a Command](sshdognano.png)
+![ls -a Command](https://i.imgur.com/2LxO6Ta.png)
 
 ## Becoming a Keymaker
 
@@ -104,7 +104,7 @@ RSA is a type of key system that is widely used, and we can specify which type o
 
 Save the key in the default location and leave the passphrase empty. Your output should look similar to this screenshot.
 
-![ls -a Command](sshkeygen.png)
+![ls -a Command](https://i.imgur.com/fA5C2FB.png)
 
 After this, use `scp` to teleport the `id_rsa.pub` file from your local computer to the `~/.ssh/authorized_keys` location of the remote SSH server. Use the output from `ssh-keygen` to locate the public key file's location. The scp command would follow this template
 
@@ -124,5 +124,5 @@ Another example of an useful one-liner is with `javac` and `java`. By running `j
 
 I combined `ssh` and `scp` to create a one-liner command that creates a folder, copies the Java file into the folder, and then remotely compiles and executes the Java file.
 
-![Remote Java Execution One-Liner](javac.png)
+![Remote Java Execution One-Liner](https://i.imgur.com/u2rcS0O.png)
 

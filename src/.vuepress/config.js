@@ -10,7 +10,7 @@ module.exports = {
    */
   description: description,
 
-  base: "/CSE15L/",
+  /* base: "/CSE15L/", */
 
   /**
    * Extra tags to be injected to the page HTML `<head>`
@@ -34,7 +34,7 @@ module.exports = {
     editLinks: false,
     docsDir: '',
     editLinkText: '',
-    lastUpdated: true,
+    lastUpdated: false,
     displayAllHeaders: true,
     nav: [
       {
@@ -42,7 +42,7 @@ module.exports = {
         link: 'https://github.com/waymondrang/CSE15L'
       }
     ],
-    logo: "/logo.png",
+    logo: "https://i.imgur.com/iPkZ79X.png",
     sidebar: [
       '/',
       '/week_two'
