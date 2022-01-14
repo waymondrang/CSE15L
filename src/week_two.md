@@ -6,19 +6,19 @@ This document will serve as an introductory guide to CSE 15L, teaching everythin
 
 ## Installing Visual Studio Code
 
-Visual Studio Code is your go-to text editor. It's fast, reliable, and ice to look at.
+Visual Studio Code is your go-to text editor. It's fast, reliable, and nice to look at.
 
-To install it, visit [their website](https://code.visualstudio.com/) and follow the instructions to download and install it. If your operating system is not compatible, you could try to use their [online editor](https://vscode.dev/). However, we will be using the terminal in the next steps which is unavailable in the online editor.
+To install it, visit [their website](https://code.visualstudio.com/) and follow the instructions to download and install it. If your operating system is not compatible, you could try to use their [online editor](https://vscode.dev/). However, we will be using the terminal for the next steps which is unavailable in the online editor.
 
-Once it has installed, open it and you should be presented with a window similar to the one below. Your window may have slightly different colors or designs—Visual Studio Code has different themes you can play with!
+Once it has been installed, open it and you should be presented with a window similar to the one below. Your window may have slightly different colors or designs—Visual Studio Code has different themes you can play with!
 
 ![New Visual Studio Code Window](https://i.imgur.com/mNSRQyZ.png)
 
 ## Getting Connected
 
-Before you connect to your CSE course-specific account, you'll need to do several steps. If you are using Windows, verify you have OpenSSH. If you can run `ssh` in your terminal, then you already have SSH installed on your system. You can learn how to install OpenSSH [here](https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse).
+Before you connect to your CSE course-specific account, you'll need to perform several steps. If you are using Windows, verify that you have OpenSSH. If you can run `ssh` in your terminal, then you already have SSH installed on your system. You can learn how to install OpenSSH [here](https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse).
 
-After you can use the `ssh` command, look up your CSE 15L specific UCSD account [here](https://sdacs.ucsd.edu/~icc/index.php). You may need to change your password to access your course-specific accounts.
+After you can use the `ssh` command, look up your CSE 15L specific UCSD account [here](https://sdacs.ucsd.edu/~icc/index.php). You may need to change your password to access your course-specific account.
 
 Now, we do the fun stuff. In Visual Studio Code, open a new terminal window by using the shortcut ``CTRL + SHIFT + ` `` or by navigating to the **Terminal** tab in the menu and selecting **New Terminal**.
 
@@ -34,15 +34,15 @@ You may be prompted with the following question. Type `yes` to continue.
 Are you sure you want to continue connecting (yes/no/[fingerprint])?
 ```
 
-After that, you will be prompted to enter in your password, after which you will see output that looks similar to this.
+After that, you will be prompted to enter your password, after which you will see an output that looks similar to this.
 
 ![Successful SSH Connection](https://i.imgur.com/fTLGd4j.png)
 
-If you see this message, that means you have successfully connected to a computer in the CSE basement. Now, any commands that you run in the terminal will execute remotely on the connected computer.
+If you see this message, that means you have successfully connected to a computer in the CSE basement. Currently, any commands that you run in the terminal will execute remotely on the connected computer.
 
 ## Executing Commands
 
-Now that were connected to our remote computer like Neo to the Matrix, play around with the following commands
+Now that we have connected to our remote computer like Neo to the Matrix, play around with the following commands
 
 | Command | Description                             |
 | ------- | --------------------------------------- |
@@ -68,7 +68,7 @@ That's a lot of hidden items!
 
 ## Teleporting Files
 
-Now you'll learn a magic trick that's sure to amaze. `scp` is the command that will teleport files from your computer to your remote computer in the CSE basement (or from the remote computer to your local computer). Lets try it out.
+Now you'll learn a magic trick that's sure to amaze. `scp` is the command that will teleport files from your computer to your remote computer in the CSE basement (or from the remote computer to your local computer). Let's try it out.
 
 In your Visual Studio Code window, create a text file and name it whatever you please. Type and save anything into the file, and run the following command in the terminal.
 
@@ -102,11 +102,11 @@ To get started, run the `ssh-keygen` command on your *local* computer. By defaul
 
 RSA is a type of key system that is widely used, and we can specify which type of key system we want by using the `-t` option. Because the command defaults to RSA, running `ssh-keygen -t rsa` would be no different than the original command. 
 
-Save the key in the default location and leave the passphrase empty. Your output should look similar to this screenshot.
+Save the key to the default location and leave the passphrase empty. Your output should look similar to this screenshot.
 
 ![ls -a Command](https://i.imgur.com/fA5C2FB.png)
 
-After this, use `scp` to teleport the `id_rsa.pub` file from your local computer to the `~/.ssh/authorized_keys` location of the remote SSH server. Use the output from `ssh-keygen` to locate the public key file's location. The scp command would follow this template
+After this, use `scp` to teleport the `id_rsa.pub` file from your local computer to the `~/.ssh/authorized_keys` location of the remote SSH server. Use the output from `ssh-keygen` to locate the public key file's location. The scp command should follow this template
 
 ```
 scp /PATH/TO/PUBLIC/KEY/id_rsa.pub USERNAME@ieng6.ucsd.edu:~/.ssh/authorized_keys
@@ -120,9 +120,8 @@ Now that running `ssh` is more convenient, you can easily run commands on the re
 
 For example, running `ssh` with `cd projects;ls` would login, navigate to the projects folder, and list the items within the folder. Using `;`, you can run multiple commands sequentially.
 
-Another example of an useful one-liner is with `javac` and `java`. By running `javac` and then `java` on the remote computer, you can remotely compile and execute Java code.
+Another example of a useful one-liner is with `javac` and `java`. By running `javac` and then `java` on the remote computer, you can remotely compile and execute Java code.
 
 I combined `ssh` and `scp` to create a one-liner command that creates a folder, copies the Java file into the folder, and then remotely compiles and executes the Java file.
 
 ![Remote Java Execution One-Liner](https://i.imgur.com/u2rcS0O.png)
-
