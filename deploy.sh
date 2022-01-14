@@ -1,5 +1,10 @@
 #!/usr/bin/env sh
 
+if [ $# -eq 0 ]; then
+    echo "no git commit message provided"
+    exit 1
+fi
+
 # abort on errors
 set -e
 
@@ -14,7 +19,7 @@ cd src/.vuepress/dist
 
 git init
 git add *
-git commit -m "deploy"
+git commit -m " $1 "
 
 # if you are deploying to https://<USERNAME>.github.io
 # git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git master

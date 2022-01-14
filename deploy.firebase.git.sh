@@ -1,5 +1,12 @@
 #!/usr/bin/env sh
 
+if [ $# -eq 0 ]; then
+    echo "no git commit message provided"
+    echo "press any key to continue"
+    read -n 1
+    exit 1
+fi
+
 # abort on errors
 set -e
 
@@ -23,3 +30,8 @@ cd src/.vuepress/
 firebase deploy
 
 cd -
+
+git status
+git add .
+git commit -m " $1 "
+git push

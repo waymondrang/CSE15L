@@ -53,7 +53,7 @@ module.exports = {
         link: 'https://github.com/waymondrang/CSE15L'
       }
     ],
-    logo: "https://i.imgur.com/iPkZ79X.png",
+    logo: "https://i.imgur.com/LiFjrJl.png",
     sidebar: [
       '/',
       '/week_two'
