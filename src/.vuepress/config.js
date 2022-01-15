@@ -63,4 +63,14 @@ module.exports = {
   /**
    * Apply plugins，ref：https://v1.vuepress.vuejs.org/zh/plugin/
    */
+
+  plugins: [
+    ['@vuepress/medium-zoom',
+      {
+        selector: "img",
+        options: {
+          background: '#1a1a1afa'
+        }
+      }],
+  ]
 }
