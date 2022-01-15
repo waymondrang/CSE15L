@@ -12,12 +12,14 @@ jobs:
         uses: actions/checkout@master
       - name: install dependencies
         run: yarn install
+      - name: run ls
+        run: ls
   firebase:
     runs-on: ubuntu-latest
     needs: prepare
     steps:
       - name: navigate
-        run: ls ${{ github.workspace }}
+        run: cd ${{ github.workspace }}
       - name: build for firebase
         run: npm run docs:src
         env:
@@ -33,7 +35,7 @@ jobs:
     needs: prepare
     steps:
       - name: navigate
-        run: ls ${{ github.workspace }}
+        run: cd ${{ github.workspace }}
       - name: build for gh-pages
         run: npm run docs:src
         env:
