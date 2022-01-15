@@ -17,7 +17,7 @@ jobs:
     needs: prepare
     steps:
       - name: navigate
-        run: cd ${{github.event.repository.name}}
+        run: ls ${{ github.workspace }}
       - name: build for firebase
         run: npm run docs:src
         env:
@@ -33,7 +33,7 @@ jobs:
     needs: prepare
     steps:
       - name: navigate
-        run: cd ${{github.event.repository.name}}
+        run: ls ${{ github.workspace }}
       - name: build for gh-pages
         run: npm run docs:src
         env:
