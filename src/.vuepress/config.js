@@ -10,7 +10,7 @@ module.exports = {
    */
   description: description,
 
-  /* base: "/CSE15L/", */
+  base: process.env.DEPLOYMENT_BASE,
 
   /**
    * Extra tags to be injected to the page HTML `<head>`
