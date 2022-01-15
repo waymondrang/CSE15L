@@ -16,6 +16,8 @@ jobs:
     runs-on: ubuntu-latest
     needs: prepare
     steps:
+      - name: navigate
+        run: cd ${{github.event.repository.name}}
       - name: build for firebase
         run: npm run docs:src
         env:
@@ -30,6 +32,8 @@ jobs:
     runs-on: ubuntu-latest
     needs: prepare
     steps:
+      - name: navigate
+        run: cd ${{github.event.repository.name}}
       - name: build for gh-pages
         run: npm run docs:src
         env:
