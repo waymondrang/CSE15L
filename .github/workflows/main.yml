@@ -19,7 +19,7 @@ jobs:
         uses: actions/upload-artifact@master
         with:
           name: build
-          path: dist
+          path: src/.vuepress/dist
   deploy:
     name: deploy
     needs: build
@@ -31,7 +31,7 @@ jobs:
         uses: actions/download-artifact@master
         with:
           name: build
-          path: dist
+          path: src/.vuepress/dist
       - name: deploy to firebase
         uses: w9jds/firebase-action@master
         with:
