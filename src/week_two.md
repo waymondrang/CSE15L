@@ -125,3 +125,5 @@ Another example of a useful one-liner is with `javac` and `java`. By running `ja
 I combined `ssh` and `scp` to create a one-liner command that creates a folder, copies the Java file into the folder, and then remotely compiles and executes the Java file.
 
 ![Remote Java Execution One-Liner](https://i.imgur.com/u2rcS0O.png)
+
+So, instead of running `ssh ucsd` and then running the commands separately on the remote server, copying over the files from my local computer, and then logging back into the remote computer to compile and run the Java code, which would take approximately 180 keystrokes (including letter, symbols, and enter keys) with `ssh ucsd` or approximately 240 without using alias and RSA key and 9 separate commands, I was able to reduce it to 150 keystrokes using the alias and RSA key (including letter, symbols, and enter keys) in a single command.
