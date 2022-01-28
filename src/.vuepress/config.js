@@ -4,7 +4,7 @@ module.exports = {
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#title
    */
-  title: 'Raymond Wang\'s CSE15L Homepage',
+  title: 'Raymond Wang\'s CSE 15L Homepage',
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#description
    */
@@ -55,8 +55,9 @@ module.exports = {
     ],
     logo: "https://i.imgur.com/LiFjrJl.png",
     sidebar: [
-      '/',
-      '/week_two'
+      "/",
+      "/week_two",
+      "/week_four"
     ]
   },
 

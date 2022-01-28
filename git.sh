@@ -11,7 +11,7 @@ set -e
 
 # stage changes, commit, and push
 git status
-git add .
+git add *
 git commit -m " $1 "
 git push
 
