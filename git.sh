@@ -7,12 +7,12 @@ if [ $# -eq 0 ]; then
 fi
 
 # abort on errors
-set -e
+# set -e
 
 # stage changes, commit, and push
 git status
 git add *
-git commit -m " $1 "
+git commit -a -m " $1 "
 git push
 
 # success!

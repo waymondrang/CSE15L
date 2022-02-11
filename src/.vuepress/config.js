@@ -57,7 +57,8 @@ module.exports = {
     sidebar: [
       "/",
       "/week_two",
-      "/week_four"
+      "/week_four",
+      "/week_six"
     ]
   },
 
