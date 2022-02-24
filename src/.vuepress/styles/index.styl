@@ -5,10 +5,35 @@
  */
 
 .home .hero img
-  max-width: 450px!important
+  max-width: 450px !important
 
 ol, p, td, th, ul
   line-height: 1.7
+
+.search-box .suggestion.focused
+  background-color: #333333 !important
+
+button
+  background-color: #4d4d4d;
+  padding: 14px;
+  border-radius: 6px;
+  border: none;
+  color: #fafafa;
+  font-family: inherit;
+  width: 100%;
+  height: 100%;
+
+a
+  cursor: pointer;
+
+.left_button
+  margin-right: 12px;
+
+.flex_button
+  flex: 1;
+
+.flex_buttons 
+  display: flex;
 
 html, body, .sidebar, .navbar, .navbar .links
   background-color: #1a1a1a !important
@@ -23,13 +48,13 @@ tr:nth-child(2n)
 .theme-default-content pre code, .theme-default-content pre[class*="language-"] code
   background-color: transparent !important
 
-.sidebar, .navbar, .page-nav .inner, h2, .home .footer, .search-box input, th, td, .sidebar .nav-links
+.sidebar, .navbar, .page-nav .inner, h2, .home .footer, .search-box input, th, td, .sidebar .nav-links, .search-box .suggestions, blockquote
   border-color: #404040 !important
 
 .search-box input
  font-family: inherit
 
-.search-box input
+.search-box input, .search-box .suggestions
   background-color: #262626 !important
 
 .home .footer
